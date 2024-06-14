@@ -1,27 +1,16 @@
 package JogoDeTabuleiro;
 
 public class Pecas {
- private int coluna;
- private int linhas;
+ protected Posicao posicao;
+ private Tabuleiro tabuleiro;
+
+public Pecas(Tabuleiro tabuleiro) {
+    this.tabuleiro = tabuleiro;
+    posicao = null;
+}
+
+protected  Tabuleiro getTabuleiro() {
+    return tabuleiro;
+}
  
-    public Pecas(int coluna, int linhas) {
-        this.coluna = coluna;
-        this.linhas = linhas;
-    }
-    public int getColuna() {
-        return coluna;
-    }
-    public void setColuna(int coluna) {
-        this.coluna = coluna;
-    }
-    public int getLinhas() {
-        return linhas;
-    }
-    public void setLinhas(int linhas) {
-        this.linhas = linhas;
-    }
-    @Override
-    public String toString(){
-     return linhas + " , " + coluna;
-    }
 }
